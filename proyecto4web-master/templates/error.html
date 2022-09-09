@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+<!--Project1 Steven Brito
+Esta pagina tiene la pagina que se muestra al ocurrir un error-->
+<h1>Arreglaremos su problema... </h1> {{ message }}
+
+<div align="center"><img src="../static/lunes.jpg"></div>
+
+<section class="form-register">
+  <form action="{{ url_for ('index')}}">
+    <button class="btn-primary"> Regresar a Login </button>
+  </form>
+</section>
+{% endblock %}

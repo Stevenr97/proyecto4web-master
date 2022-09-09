@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+
+<!--Project1 Steven Brito
+Esta pagina tiene el registro donde el usuario se guardara en la base de datos-->
+<section class="form-register">
+
+      <form action="{{url_for ('registerattempt')}}" method="post">
+
+          <input class="controls" name="fname" placeholder="Ingrese Nombre Completo" required>
+
+          <input class="controls" name="reguser" placeholder="Ingrese nombre de usuario" required>
+
+          <input class="controls" type="password" name="regpass" placeholder="Ingrese Contraseña" required>
+
+        <button class="btn-primary"> Registrar </button>
+
+      </form>
+</section>
+  {% endblock %}

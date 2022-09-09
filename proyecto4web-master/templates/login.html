@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+{% endblock %}
+
+{% block body %}
+<!--Project1 Steven Brito
+Esta pagina tiene el login y el registro-->
+
+<section class="form-register">
+
+    <form action= "{{ url_for ('login')}}" method="post">
+      <h1>LOGIN</h1>
+        <input class="control" name="user" placeholder="Usuario" required>
+        <br>
+        <br>
+        <input class="control" type="password" name="password" placeholder="Contraseña" required>
+        <button class="btn-primary">login</button>
+
+    </form>
+  <form action=" {{ url_for ('register')}}">
+      <button class="btn-primary"> Registrarse </button>
+
+  </form>
+</section>
+{% endblock %}

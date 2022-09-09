@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+{% endblock %}
+
+{% block body %}
+<!-- Proyecto1 aqui se pueden ver datos de los libros-->
+<style>
+  h1 {color:yellow}
+  ul {color:white}
+</style>
+<h1> {{book.title}} </h1>
+
+<ul>
+      <li>isbn: {{ book.isbn }}</li>
+      <li>Autor: {{ book.author }}</li>
+      <li>Año de publicacion: {{ book.year }}</li>
+  </ul>
+
+  {{ message  }}
+
+  <ul>
+      <li>Calificacion : {{ review.rating }} </li>
+      <li>Comentario: {{ review.opinion }}  </li>
+    </ul>
+
+  <form action = "{{ url_for('reviewsubmission' )}}", method="post">
+  <div class="form-group">
+    <button class="btn btn-primary"> Enviar Calificacion para este libro </button>
+  </div>
+</form>
+
+<form action= "{{ url_for ('dashboard')}}">
+  <button class="btn btn-primary"> Buscar libros  </button>
+</form>
+
+<h1>Calificacion dentro de Goodreads: </h1>
+{{ message2 }}
+<ul>
+  <li>Puntaje Promedio: {{ average }} </li>
+  <li>Numero de calificaciones: {{ total }}  </li>
+</ul>
+
+
+<form action = "{{ url_for ('logout')}}" method="post">
+  <div class = "form-group">
+    <button class="btn btn-primary"> Salir </button>
+  </div>
+</form>
+
+{% endblock %}

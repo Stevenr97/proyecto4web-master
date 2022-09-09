@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+<!--Project1 Steven Brito
+Esta pagina tiene el buscador de libros-->
+<section class="form-register">
+
+<h1>Buscador de  libros </h1>
+<h1>{{ message2 }}
+</h1>
+  <form action="{{ url_for ('dashboardsearch')}}" method="post">
+    <div class="form-group">
+        <input class="controls" name="book" placeholder="Ingrese dato del libro para buscar" required>
+      </div>
+
+        <button class="btn-primary">Buscar </button>
+  </form>
+
+  <ul>
+    {% for book in books %}
+      <li>
+        <a href="{{ url_for('bookdetails', book_isbn=book.isbn )}}">
+          {{ book.title }}
+        </a>
+      </li>
+      {% endfor %}
+  </ul>
+
+  {{ message }}
+  <form action = "{{ url_for ('logout')}}" method="post">
+      <button class="btn-primary"> Salir </button>
+  </form>
+
+
+</section>
+
+{% endblock %}

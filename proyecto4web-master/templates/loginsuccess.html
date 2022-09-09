@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+{% endblock %}
+
+
+
+{% block body %}
+<!--Project1 Steven Brito
+Esta pagina tiene un mensaje de bienvenido al usuario si logra hacer login-->
+<section class="form-register">
+<h1 style="color:White";> Bienvenido {{ fullname }} :D  </h1>
+<form action= "{{ url_for ('dashboard')}}">
+  <button class="btn-primary"> Continuar </button>
+</form>
+<form action= "{{ url_for ('extra')}}">
+  <button class="btn-primary">Extra</button>
+  <a href="index.html")>Mostrar repertorio de Programacion Grafica </a>
+  <br>
+
+  <h1></h1>
+</form>
+</section>
+
+
+{% endblock %}

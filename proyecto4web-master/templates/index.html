@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+<body>
+  <form action=" {{ url_for ('shaders')}}">
+      <button class="btn-primary"> Vertex and Fragment Shaders </button>
+  </form>
+  <form action=" {{ url_for ('rayT')}}">
+    <button class="btn-primary"> Ray Tracing </button>
+</body>
+{% endblock %}
